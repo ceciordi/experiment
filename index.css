@@ -1,0 +1,143 @@
+html, body {
+    margin: 0;
+    padding: 0;
+	font-family: 'Lato', sans-serif;
+/*    background: url(img/sakura/sakura.png);*/
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/** For centering trick **/
+.page-footer,
+.page-header,
+.main-content {
+    text-align: center;
+}
+
+/** Completion of centering trick **/
+.container {
+    text-align: left;
+    margin: auto;
+	max-width: 1200px;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.page-header,
+.page-header a,
+.page-footer a,
+.page-footer {
+	color: #FFF;
+    text-decoration: none;
+}
+
+.page-header {
+    margin-top: 0;
+    padding: 16px;
+    background: -webkit-linear-gradient(left, #ee0979, #ff6a00);
+    background: -o-linear-gradient(right, #ee0979, #ff6a00);
+    background: -moz-linear-gradient(right, #ee0979, #ff6a00);
+    background: linear-gradient(to right, #ee0979, #ff6a00);
+	box-shadow: 5px 5px 20px rgba(77, 6, 44, 0.51) inset; 
+	border: none;
+}
+
+.page-header .controls .btn {
+	color: #e84029;
+	background-color: #FFF;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	border-radius: 20px;
+	outline: none;
+	border: none;
+	margin: 25px 10px;
+	box-shadow: 5px 5px 20px rgba(77, 6, 44, 0.51); 
+	
+}
+
+.page-header .controls .btn:hover {
+	color: #fff;
+	background-color: rgba(255, 106, 0, 0.48);
+}
+
+.page-header .controls .btn:active {
+	background-color: rgb(180, 9, 9);
+	box-shadow: 0 5px #777;
+	transform: translateY(4px);
+}
+
+.page-header > * {
+	display: inline-block;
+}
+
+	.jumbotron {
+/*    background-color: transparent;*/
+}
+
+.jumbotron h2 {
+    font-family: 'Barrio', cursive;
+    font-size: 32px;
+    color: #e84029;
+    text-align: center;
+    padding-right: 15px;
+}
+
+.page-footer {
+    background: -webkit-linear-gradient(left, #ee0979, #ff6a00);
+    background: -o-linear-gradient(right, #ee0979, #ff6a00);
+    background: -moz-linear-gradient(right, #ee0979, #ff6a00);
+    background: linear-gradient(to right, #ee0979, #ff6a00);
+	box-shadow: 5px 5px 20px rgba(77, 6, 44, 0.51) inset; 
+}
+
+.page-footer .container span {
+    display: inline-block;
+    font-weight: 100;
+    letter-spacing: 2px;
+    padding: 18px 0px;
+    font-size: 18px;
+    margin-right: 20px;
+	margin-top: 5px;
+	text-decoration: none;
+}
+
+.jumbotron {
+	background-color: transparent;
+}
+
+
+.main-content .monster-images {
+    text-align: center;
+}
+
+.main-content .monster-images .monster-image {
+    margin: 0 auto 5px;
+}
+
+.main-content .monster-images .monster-image img {
+    display: inline-block;
+	border: 1px solid #ff6a00;
+	border-radius: 20px;
+}
+
+
+
+@media (min-device-width: 320px) {
+    .main-content .monster-image {
+        margin-bottom: 5px;
+    }
+}
+
+@media (min-device-width: 768px) {
+    .container {
+        width: 89%;
+		max-width: 1200px;
+    }
+}
+
