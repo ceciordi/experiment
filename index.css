@@ -22,6 +22,7 @@ html, body {
 .container {
     text-align: left;
     margin: auto;
+	margin-bottom: 21px;
 	max-width: 1200px;
 }
 
@@ -97,19 +98,33 @@ html, body {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
-}
+} 
 
-.col-xs-6  .col-md-3 a {
-	padding: 18px;
-	margin: 5px;
-}
-
-.jumbotron h2 {
+.jumbotron h2, .game-area h2{
     font-family: 'Barrio', cursive;
     font-size: 32px;
     color: #e84029;
     text-align: center;
     padding-right: 15px;
+	margin-bottom: 55px;
+	letter-spacing: 1px;
+}
+
+.caption p {
+	font-family: 'Barrio', cursive;
+	color: #e84029; 
+	text-align: center;
+}
+
+.col-md-3 a {
+	text-decoration: none;
+}
+
+.red-tooltip + .tooltip > .tooltip-inner {
+	background-color: #e84029;
+}
+.red-tooltip + .tooltip > .tooltip-arrow {
+	border-bottom-color: red;
 }
 
 .page-footer {
@@ -187,6 +202,18 @@ html, body {
 
 .opening-cards {
 	margin-top: 21px;
+}
+
+hr {
+	display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+	border-color: #e84029;
+	opacity: 0.5;
 }
 
 @media (min-device-width: 320px) {
