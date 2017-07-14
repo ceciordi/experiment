@@ -1,6 +1,8 @@
-	<nav class="page-footer navbar navbar-default navbar-fixed-bottom">
+	<? php <nav class="page-footer navbar navbar-default navbar-fixed-bottom">
 			<div class="container">
-				<span>&copy;Mänhsturs 2017</span>
-				<span>Brooklyn, NY</span>
+				<span>Copyright &copy;2017</span> 
+				<span>Mänhsturs</span>
+				<span>All Rights Reserved.</span>
 			</div>
 		</nav>
+?>

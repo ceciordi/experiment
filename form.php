@@ -1,3 +1,7 @@
+<? php 
+if (isset($_POST['name'])) $name = $_POST['name'];
+else $name = "(Not entered)";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,32 +24,52 @@
 			<div class="container">
 				<div class="row">
 					<div class="title pull-left">
-					<a href="index.html"><h1>Mänhsturs</h1>
-						</a>
+					<a href="index.html"><h1>Mänhsturs</h1></a>
 					</div>
 					<div class="controls pull-right">
 					<a href="play.html"><button class="btn btn-default">PLAY</button></a>
-					<a href="options.html"><button class="btn btn-default">OPTIONS</button></a>
+					<a href="form.html"><button class="btn btn-default">SIGN UP</button></a>
 					</div>
 				</div>
 			</div>
 		</div>
-		  <div class="container">
+		
+		 
 			<div class="jumbotron">
-			   <div class="typewriter">
-				<h2>Options</h2>
-				   </div>
+				 <div class="container">
+					 	<h2>KEEP TRACK OF YOUR PROGRESS! CREATE AN ACCOUNT!</h2>
+						Your name is: <?= $name; ?><br>
+				<form method="post" action="form.php"> 
+				What is your name?
+				
+					<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" id="name">
+				  </div>
+				  <div class="form-group">
+					<label for="email">Email address:</label>
+					<input type="email" class="form-control" id="email">
+				  </div>
+				  <div class="form-group">
+					<label for="pwd">Password:</label>
+					<input type="password" class="form-control" id="pwd">
+				  </div>
+				  <div class="checkbox">
+					<label><input type="checkbox"> Remember me</label>
+				  </div>
+				  <button type="submit" class="btn btn-default #change-color">Submit</button>
+				</form>
 				</div>
 			</div>
-		</div>
+
 
 
 
 <nav class="page-footer navbar navbar-default navbar-fixed-bottom">
 			<div class="container">
-				<a href="#"><span>&copy;Mänhsturs 2017</span></a>
-				<a href="#"><span>All rights reserved.</span></a>
-				<a href="#"><span>Brooklyn, NY</span></a>
+				<span>Copyright &copy;2017</span> 
+				<span>Mänhsturs</span>
+				<span>All Rights Reserved.</span>
 			</div>
 </nav>
 
@@ -61,3 +85,4 @@
 </body>
 
 </html>
+	

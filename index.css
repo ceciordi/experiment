@@ -1,34 +1,43 @@
 @import url(css/card-flip.css);
-	
-html, body {
-    margin: 0;
-    padding: 0;
-	font-family: 'Lato', sans-serif;
 
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
 }
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /** For centering trick **/
 .page-footer,
 .page-header,
-.main-content {
-    text-align: center;
+.main-content
+{
+	text-align: center;
 }
 
 /** Completion of centering trick **/
 .container {
-    text-align: left;
-    margin: auto;
+	text-align: left;
+	margin: auto;
 	margin-bottom: 21px;
 	max-width: 1200px;
 }
 
 .wrapper {
-    height: 100%;
-    width: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+.pos-fixed {
+	position: fixed;
+}
+
+.page-header {
+	width: 100%;
+	z-index: 999;
 }
 
 .page-header,
@@ -36,17 +45,17 @@ html, body {
 .page-footer a,
 .page-footer {
 	color: #FFF;
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .page-header {
-    margin-top: 0;
-    padding: 16px;
-    background: -webkit-linear-gradient(left, #ee0979, #ff6a00);
-    background: -o-linear-gradient(right, #ee0979, #ff6a00);
-    background: -moz-linear-gradient(right, #ee0979, #ff6a00);
-    background: linear-gradient(to right, #ee0979, #ff6a00);
-	box-shadow: 5px 5px 20px rgba(77, 6, 44, 0.51) inset; 
+	margin-top: 0;
+	padding: 16px;
+	background: -webkit-linear-gradient(left, #ee0979, #ff6a00);
+	background: -o-linear-gradient(right, #ee0979, #ff6a00);
+	background: -moz-linear-gradient(right, #ee0979, #ff6a00);
+	background: linear-gradient(to right, #ee0979, #ff6a00);
+	box-shadow: 5px 5px 20px rgba(77, 6, 44, 0.51)inset; 
 	border: none;
 }
 
@@ -60,8 +69,7 @@ html, body {
 	outline: none;
 	border: none;
 	margin: 25px 10px;
-	box-shadow: 5px 5px 20px rgba(77, 6, 44, 0.51); 
-	
+	box-shadow: 5px 5px 20px rgba(77, 6, 44, 0.51) inset; 
 }
 
 .page-header .controls .btn:hover {
@@ -79,15 +87,19 @@ html, body {
 	display: inline-block;
 }
 
+.faux-header {
+	visibility: hidden;
+}
+
 .typewriter h2 {
 	overflow: hidden;
 	border-right: .15em;
 	white-space: nowrap; 
-  	margin: 0 auto; 
-  	letter-spacing: .15em; 
-  	animation: 
+	margin: 0 auto; 
+	letter-spacing: .15em; 
+	animation: 
 	typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+	blink-caret .75s step-end infinite;
 }
 
 @keyframes typing {
@@ -100,12 +112,12 @@ html, body {
   50% { border-color: orange; }
 } 
 
-.jumbotron h2, .game-area h2{
-    font-family: 'Barrio', cursive;
-    font-size: 32px;
-    color: #e84029;
-    text-align: center;
-    padding-right: 15px;
+.jumbotron h2, .game-area h2, .no-account h3 {
+	font-family: 'Barrio', cursive;
+	font-size: 32px;
+	color: #e84029;
+	text-align: center;
+	padding-right: 15px;
 	margin-bottom: 55px;
 	letter-spacing: 1px;
 }
@@ -120,47 +132,68 @@ html, body {
 	text-decoration: none;
 }
 
+.container .btn btn-info {
+	background-color: 
+}
 .red-tooltip + .tooltip > .tooltip-inner {
 	background-color: #e84029;
-}
+} /* Not working yet */
 .red-tooltip + .tooltip > .tooltip-arrow {
 	border-bottom-color: red;
-}
+} /* Not working yet */
 
 .page-footer {
-    background: -webkit-linear-gradient(left, #ee0979, #ff6a00);
-    background: -o-linear-gradient(right, #ee0979, #ff6a00);
-    background: -moz-linear-gradient(right, #ee0979, #ff6a00);
-    background: linear-gradient(to right, #ee0979, #ff6a00);
+	background: -webkit-linear-gradient(left, #ee0979, #ff6a00);
+	background: -o-linear-gradient(right, #ee0979, #ff6a00);
+	background: -moz-linear-gradient(right, #ee0979, #ff6a00);
+	background: linear-gradient(to right, #ee0979, #ff6a00);
 	box-shadow: 5px 5px 20px rgba(77, 6, 44, 0.51) inset; 
+	margin-bottom: 0;
 }
 
 .page-footer .container span {
-    display: inline-block;
-    font-weight: 100;
-    letter-spacing: 2px;
-    padding: 18px 0px;
-    font-size: 18px;
-    margin-right: 20px;
+	display: inline-block;
+	font-weight: 100;
+	letter-spacing: 2px;
+	padding: 18px 0px;
+	font-size: 13px;
+	margin-right: 20px;
 	margin-top: 5px;
 	text-decoration: none;
 }
+
+.page-footer .container span:nth-child(2) {
+	font-size: 21px;
+} 
 
 .jumbotron {
 	background-color: transparent;
 }
 
+form {
+	margin-bottom: 34px;
+	margin: 0 auto;
+	width: 75%;
+	color: #FFF;
+	padding: 21px;
+	border-radius: 20px;
+	background: -webkit-linear-gradient(left, #ee0979, #ff6a00);
+	background: -o-linear-gradient(right, #ee0979, #ff6a00);
+	background: -moz-linear-gradient(right, #ee0979, #ff6a00);
+	background: linear-gradient(to right, #ee0979, #ff6a00);
+	box-shadow: 5px 5px 20px rgba(77, 6, 44, 0.51) inset; 
+}
 
 .main-content .monster-images {
-    text-align: center;
+	text-align: center;
 }
 
 .main-content .monster-images .monster-image {
-    margin: 0 auto 5px;
+	margin: 0 auto 5px;
 }
 
 .main-content .monster-images .monster-image img {
-    display: inline-block;
+	display: inline-block;
 	border: 1px solid #ff6a00;
 	border-radius: 20px;
 }
@@ -206,26 +239,42 @@ html, body {
 
 hr {
 	display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 1px;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+	width: 75%;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 1px;
 	border-color: #e84029;
 	opacity: 0.5;
 }
 
 @media (min-device-width: 320px) {
-    .main-content .monster-image {
-        margin-bottom: 5px;
-    }
+	.page-footer {
+		border: none;
+	}
+	.main-content .monster-image {
+		margin-bottom: 5px;
+	}
+}
+
+@media (min-device-width: 320px) and (orientation: portrait) {
+	.page-header .title {
+		font-size: 34px;
+	}
+}
+
+@media (min-device-width: 320px) and (orientation: landscape) {
+	.main-content .monster-image {
+		margin-bottom: 5px;
+	}
 }
 
 @media (min-device-width: 768px) {
-    .container {
-        width: 89%;
+	.container {
+		width: 89%;
 		max-width: 1200px;
-    }
+	}
 }
 

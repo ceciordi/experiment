@@ -1,16 +1,16 @@
- <div class="page-header">
+	<? php 
+	<div class="page-header pos-fixed">
 			<div class="container">
 				<div class="row">
-					<div class="title pull-left">
-						<a href="#">
-							<h1>Mänhsturs</h1>
-						</a>
-					</div>
+					<a href="index.html" class="title pull-left">
+						<h1>Mänhsturs</h1>
+					</a>
 					<div class="controls pull-right">
-						<button class="btn btn-default">OPTIONS</button>
-						<button class="btn btn-default">OPTIONS</button>
+						<a href="play.html" class="btn btn-default">PLAY</a>
+						<a href="form.html" class="btn btn-default">SIGN UP</a>
+						<a href="form.html" class="btn btn-default">SIGN IN</a>
 					</div>
 				</div>
 			</div>
 		</div>
-	
+	?>
