@@ -26,6 +26,12 @@ html, body {
 	max-width: 1200px;
 }
 
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
 .wrapper {
 	height: 100%;
 	width: 100%;
@@ -135,12 +141,6 @@ html, body {
 .container .btn btn-info {
 	background-color: 
 }
-.red-tooltip + .tooltip > .tooltip-inner {
-	background-color: #e84029;
-} /* Not working yet */
-.red-tooltip + .tooltip > .tooltip-arrow {
-	border-bottom-color: red;
-} /* Not working yet */
 
 .page-footer {
 	background: -webkit-linear-gradient(left, #ee0979, #ff6a00);
