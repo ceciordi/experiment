@@ -149,6 +149,10 @@ form,
 	
 }
 
+#change-color {
+	background-color: blue;
+}
+
 h3 {
 	display: inline-block;
 	padding-right: 0px;
@@ -211,6 +215,18 @@ form {
 	color: #FFF;
 	padding: 21px;
 	border-radius: 20px;
+}
+
+form .btn-default {
+	background-color: #fff;
+	color: #e84029;
+	border: 1px solid #e84029;
+}
+
+form .btn-default:hover {
+	background-color: #e84029;
+	color: #FFF;
+	border: 1px solid #e84029;
 }
 
 .main-content .monster-images {
