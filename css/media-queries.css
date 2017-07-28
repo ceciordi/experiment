@@ -3,16 +3,16 @@
 
 	a {letter-spacing: 21px;}
 	
-	.wrapper .page-header,
-	.wrapper .page-header div h1,
-	.wrapper .page-header .container,
-	.wrapper .page-header .container button	{
+	#wrapper .page-header,
+	#wrapper .page-header div h1,
+	#wrapper .page-header .container,
+	#wrapper .page-header .container button	{
 		margin: 0;
 	}
-	.wrapper .page-header .container .controls {
+	#wrapper .page-header .container .controls {
 		margin-left: 34px;
 	}
-	.wrapper .page-header .controls a {
+	#wrapper .page-header .controls a {
 		margin-right: 21px;
 	}
     .main-content .monster-image {

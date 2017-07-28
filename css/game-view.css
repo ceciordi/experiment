@@ -1,0 +1,83 @@
+#game-view > header * {
+    color: #333;
+    font: bold 34px "Lato, sans-serif";
+    display: inline-block;
+}
+
+#game-view > header .value {
+    font-size: 34px;
+}
+
+#game-view > header .game-info {
+
+}
+
+#game-view .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#game-view .cards .card-container {
+    flex-basis: 144px;
+    height: 233px;
+    text-align: center;
+    perspective: 987px;
+    margin-bottom: 21px;
+    cursor: pointer;
+}
+
+#wrapper .card {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.08s linear, box-shadow 0.13s linear;
+    transform-style: preserve-3d;
+    transform: scale(0.89, 0.89) rotateY(0);
+}
+
+#game-view .cards .card-container .card,
+#game-view .cards .card-container .card-face {
+    position: absolute;
+    border-radius: 21px;
+}
+
+#game-view .cards .card,
+#game-view .cards .card-face-front {
+    border: 1px solid #CCC;
+}
+
+#game-view .cards .card-container .card-face,
+#game-view .cards .card-container .card {
+    width: 100%;
+    height: 100%;
+}
+
+/** Card container active **/
+/*#game-view .cards .card-container:active .card,*/
+#game-view .cards .card-container.active .card {
+    transform: scale(1, 1) rotateY(180deg);
+    box-shadow: 0 0 21px rgba(0,0,0,0.21);
+}
+
+/** Front face of card **/
+#game-view .cards .card-container .card-face-front {
+    background: #fff;
+    transform: rotateY(180deg);
+    transition: box-shadow 0.21s linear;
+    box-shadow: 0 0 3px rgba(0,0,0,0.21);
+}
+
+/** When card container is active (front face) **/
+/*#game-view .cards .card-container.active .card-face-front,*/
+#game-view .cards .card-container.active .card-face-front {
+    background: #fff;
+    transform: rotateY(180deg);
+    box-shadow: 11px 11px 11px rgba(0,0,0,0.21);
+}
+
+#game-view .cards .card-container .card-face-back {
+    background: url(../../../experiment/img/sakura/sakura.png);
+    background-size: 100%;
+    /*background-blend-mode: overlay;*/
+}
