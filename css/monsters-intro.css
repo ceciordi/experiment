@@ -1,0 +1,14 @@
+#monsters-intro .monsters-for-intro {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    /*overflow: hidden;*/
+    z-index: 1;
+}
+
+#monsters-intro .monsters-for-intro > div {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 1;
+}
+

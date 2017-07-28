@@ -2,6 +2,7 @@
 @import url(views.css);
 @import url(card-flip.css);
 @import url(game-view.css);
+@import url(monsters-intro.css);
 
 html, body {
 	margin: 0;
