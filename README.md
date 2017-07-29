@@ -19,4 +19,5 @@
 - [ ] - Add styling for '#game-view .card-container' (card) for different
 device sizes (mobile, tablet, desktop) (use media queries).
 - [ ] - Finalize styling for all game views.
-
+- [X] - Add card example card.
+- [X] - Add cards styling and card effect.
