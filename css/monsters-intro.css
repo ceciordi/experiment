@@ -1,14 +1,31 @@
 #monsters-intro .monsters-for-intro {
     position: relative;
     width: 100%;
-    height: 250px;
-    /*overflow: hidden;*/
+    height: 365px;
+    overflow: hidden;
     z-index: 1;
+}
+
+#monsters-intro .monsters-for-intro > div img {
+    width: 100%;
 }
 
 #monsters-intro .monsters-for-intro > div {
     position: absolute;
-    top: 0; left: 0;
-    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 244px;
+    background: #FFF;
 }
 
+@media (min-width: 320px) {
+    #monsters-intro .monsters-for-intro {
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 800px) {
+    #monsters-intro .monsters-for-intro {
+        /*overflow: inherit;*/
+    }
+}

@@ -13,4 +13,5 @@
     - game-over-view
     - game-leader-board-view
 - [ ] - Setup game-view with cards in it.  Use flex-box to layout cards.
-- [ ] - Remove undesired/no-cool-looking monsters from game.
+- [ ] - Remove undesired/not-cool-looking monsters from game.
+- [ ] - Randomize monsters position on animating off the screen status.

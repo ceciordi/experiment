@@ -25,53 +25,45 @@ $(function () {
         });
 
 	function initMonstersIntro ($monstersParentContainer) {
+		var $monsters = $('> div', $monstersParentContainer),
+            parentContainerWidth = $monstersParentContainer.width(),
+			monsterWidth = $monsters.eq(0).width(),
+			monstersLength = $monsters.length,
+			totalMonstersWidth = monsterWidth * monstersLength;
 
 		// Get all monster divs
-		$('> div', $monstersParentContainer).each(function (ind, element) {
+		$monsters.each(function (ind, element) {
 
 			// Initial values needed for position images randomly
-			var parentContainerWidth = $monstersParentContainer.width(),
-				parentContainerHeight = $monstersParentContainer.height(),
-				imgWidth = 377,
-				imgHeight = 365,
-
-				// Variables for animation
-				distance = Math.random() * 200 + 1,
-				speed = 20 / distance,
-				initialScale = 1000 / distance * 0.01,
-				scale = initialScale > 1 ? 1 : initialScale,
-
-				// Random x and y based on parent container width and height
-				x = Math.random() * parentContainerWidth - (imgWidth * scale / 2),
-				y = Math.random() * parentContainerHeight - (imgHeight * scale / 2),
-
+			var speed = 2,
+				x = ind * monsterWidth,
 				$elm = $(element);
 
-			console.log('z-index', distance * -1, 'scale', scale, 'x', x, 'y', y);
-
 			// Store animation values using jQuery.data()
-			$elm.data({
-				monsterScale: scale,
-				monsterSpeed: speed,
-				monsterDistance: distance,
-				monsterX: x,
-				monsterY: y,
-			});
+			$elm.data('monsterX', x);
 
 			// Randomly position our monster in preparation for our animation
-			$elm.css({
-				left: x,
-				top: y,
-                transform: `scale(${scale}, ${scale})`,
-                zIndex: Math.round(distance * -1)
-            });
+			// Es6 Template Strings usage (see mdn 'template literal')
+			$elm.css('transform', `translateX(${x}px)`);
+
+            function animateMonster () {
+            	// `dx` means dynamic x
+            	var dx = $elm.data('monsterX');
+				if (dx + monsterWidth < 0) {
+					dx = totalMonstersWidth - monsterWidth;
+				}
+				dx -= speed;
+				$elm.css('transform', `translateX(${dx}px)`);
+				$elm.data('monsterX', dx);
+				requestAnimationFrame(animateMonster);
+            }
+
+            requestAnimationFrame(animateMonster);
 
 			// Set to animate
             //translate(${x}px, ${y}px)
         });
 	}
-
-
 
     initMonstersIntro($monstersIntroContainer);
 
