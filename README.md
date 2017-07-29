@@ -6,12 +6,17 @@
 ## Todos:
 - [X] - Add a suffix of views to all the views/sections eg. choose-difficulty should become choose-difficulty-view
 - [X] - Add a class of view to every views/sections.
-- [ ] - Add monsters intro animation (parallax effect?).
-- [ ] - add the following views:
-    - game-view
-    - game-summary-view
-    - game-over-view
-    - game-leader-board-view
+- [X] - Add monsters intro animation (Added scrolling animation).
+- [X] - Add the following views:
+    - [X] - game-view
+    - [X] - game-summary-view
+    - [X] - game-over-view
+    - [X] - game-leader-board-view
 - [ ] - Setup game-view with cards in it.  Use flex-box to layout cards.
 - [ ] - Remove undesired/not-cool-looking monsters from game.
-- [ ] - Randomize monsters position on animating off the screen status.
+- [X] - ~~Randomize monsters position on animating off the screen status.~~ 
+    Added monster scrolling animation instead.
+- [ ] - Add styling for '#game-view .card-container' (card) for different
+device sizes (mobile, tablet, desktop) (use media queries).
+- [ ] - Finalize styling for all game views.
+

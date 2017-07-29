@@ -1,0 +1,9 @@
+#game-leader-board-view {
+
+}
+
+#game-leader-board-view table td,
+#game-leader-board-view table th {
+    padding: 8px;
+    margin: 5px;
+}

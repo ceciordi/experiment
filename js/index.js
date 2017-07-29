@@ -6,7 +6,7 @@ $(function () {
 		$fauxHeader = $('.page-header.faux-header'),
 		$monstersIntroView = $('#monsters-intro'),
 		$monstersIntroContainer = $('.monsters-for-intro', $monstersIntroView),
-		$cards = $('.cards > .card');
+		$cards = $('.cards > .card-container');
 		$cards.on('click', function (e) {
 			e.currentTarget.classList.toggle('active');
 		});
@@ -26,7 +26,6 @@ $(function () {
 
 	function initMonstersIntro ($monstersParentContainer) {
 		var $monsters = $('> div', $monstersParentContainer),
-            parentContainerWidth = $monstersParentContainer.width(),
 			monsterWidth = $monsters.eq(0).width(),
 			monstersLength = $monsters.length,
 			totalMonstersWidth = monsterWidth * monstersLength;
@@ -59,9 +58,6 @@ $(function () {
             }
 
             requestAnimationFrame(animateMonster);
-
-			// Set to animate
-            //translate(${x}px, ${y}px)
         });
 	}
 
