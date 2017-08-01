@@ -18,6 +18,13 @@
     background: #FFF;
 }
 
+#monsters-intro-view .caption p {
+    font-size: 1.8em;
+    font-family: 'Barrio', cursive;
+    color: #e84029;
+    text-align: center;
+}
+
 @media (min-width: 320px) {
     #monsters-intro-view .monsters-for-intro {
         overflow: hidden;

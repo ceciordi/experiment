@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-#game-leader-board-view h2 {
-    text-align: start;
-}
-
 #game-leader-board-view table {
     width: 100%;
     border-collapse: collapse;

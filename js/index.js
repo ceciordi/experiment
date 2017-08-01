@@ -4,7 +4,7 @@ $(function () {
 
 	var $body = $('body'),
 		$fauxHeader = $('.page-header.faux-header'),
-		$monstersIntroView = $('#monsters-intro'),
+		$monstersIntroView = $('#monsters-intro-view'),
 		$monstersIntroContainer = $('.monsters-for-intro', $monstersIntroView),
 		$cards = $('.cards > .card-container');
 		$cards.on('click', function (e) {
