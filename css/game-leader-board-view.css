@@ -1,9 +1,106 @@
-#game-leader-board-view {
-
+#game-leader-board-view * {
+    box-sizing: border-box;
 }
 
+#game-leader-board-view h2 {
+    text-align: start;
+}
+
+#game-leader-board-view table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#game-leader-board-view tr:nth-of-type(even) {
+    background: #fff;
+}
+#game-leader-board-view tr:nth-of-type(odd) {
+    background: #eee;
+}
+
+#game-leader-board-view table thead tr th {
+    font-weight: bold;
+    background: #f32556;
+    color: white;
+}
 #game-leader-board-view table td,
 #game-leader-board-view table th {
-    padding: 8px;
-    margin: 5px;
+    padding: 21px;
+    font-size: 21px;
+    font-family: 'Barrio', cursive;
+    border: 1px solid purple;
+}
+
+#game-leader-board-view table td {
+    text-align: center;
+    font-family: "Comic Sans MS", Lato;
+    font-weight: normal;
+    color: #f32556;
+}
+
+#game-leader-board-view table {
+    text-align: center;
+    margin-bottom: 21px;
+}
+
+
+@media only screen and (max-width: 720px),
+(min-device-width: 320px) and (max-device-width: 720px) {
+
+    #game-leader-board-view table {
+        position: relative;
+    }
+
+    #game-leader-board-view table,
+    #game-leader-board-view tbody,
+    #game-leader-board-view th,
+    #game-leader-board-view td,
+    #game-leader-board-view tr {
+        display: block;
+    }
+
+    #game-leader-board-view thead {
+        display: none;
+    }
+
+    #game-leader-board-view tr {
+        position: relative;
+        border: 1px solid #ccc;
+        padding: 34px;
+    }
+
+    #game-leader-board-view table tr td {
+        position: relative;
+        left: 50%;
+        padding: 2px;
+        text-align: left;
+        border: none;
+        /*transform: translateX(-21px);*/
+
+    }
+
+    #game-leader-board-view td:before {
+        position: absolute;
+        transform: translateX(-100%);
+        font-weight: bold;
+        text-align: right;
+        padding-right: 21px;
+        white-space: nowrap;
+    }
+
+    #game-leader-board-view td:nth-of-type(1):before {
+        content: "Name";
+    }
+    #game-leader-board-view td:nth-of-type(2):before {
+        content: "Score";
+    }
+    #game-leader-board-view td:nth-of-type(3):before {
+        content: "Difficulty";
+    }
+    #game-leader-board-view td:nth-of-type(4):before {
+        content: "Duration";
+    }
+    #game-leader-board-view td:nth-of-type(5):before {
+        content: "Date";
+    }
 }

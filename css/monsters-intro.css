@@ -1,4 +1,4 @@
-#monsters-intro .monsters-for-intro {
+#monsters-intro-view .monsters-for-intro {
     position: relative;
     width: 100%;
     height: 365px;
@@ -6,11 +6,11 @@
     z-index: 1;
 }
 
-#monsters-intro .monsters-for-intro > div img {
+#monsters-intro-view .monsters-for-intro > div img {
     width: 100%;
 }
 
-#monsters-intro .monsters-for-intro > div {
+#monsters-intro-view .monsters-for-intro > div {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,13 +19,13 @@
 }
 
 @media (min-width: 320px) {
-    #monsters-intro .monsters-for-intro {
+    #monsters-intro-view .monsters-for-intro {
         overflow: hidden;
     }
 }
 
 @media (min-width: 800px) {
-    #monsters-intro .monsters-for-intro {
+    #monsters-intro-view .monsters-for-intro {
         /*overflow: inherit;*/
     }
 }

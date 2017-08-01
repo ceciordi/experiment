@@ -1,0 +1,42 @@
+.page-header {
+	margin: 0;
+    padding: 16px;
+	width: 100%;
+	background: -webkit-linear-gradient(left, #ee0979, #ff6a00);
+    background: -o-linear-gradient(right, #ee0979, #ff6a00);
+    background: -moz-linear-gradient(right, #ee0979, #ff6a00);
+    background: linear-gradient(to right, #ee0979, #ff6a00);
+	box-shadow: 5px 5px 20px rgba(77, 6, 44, 0.51); 
+	border: none;
+	z-index: 999;
+}
+
+.page-header ul {
+	padding: 0;
+	margin: 0;
+}
+
+.page-header .controls .btn:hover {
+	color: #fff;
+	background-color: rgba(255, 106, 0, 0.48);
+}
+
+.page-header .controls .btn:active {
+	background-color: rgb(180, 9, 9);
+	box-shadow: 0 5px #777;
+	transform: translateY(4px);
+}
+
+.page-header > * {
+	display: inline-block;
+}
+
+.faux-header {
+	visibility: hidden;
+}
+
+@media (min-device-width: 320px) and (orientation: portrait) {
+	.page-header .title {
+		font-size: 34px;
+	}
+}

@@ -1,0 +1,24 @@
+.page-footer {
+    margin-bottom: 0;
+}
+
+.page-footer .container span {
+    display: inline-block;
+    font-weight: 100;
+    letter-spacing: 2px;
+    padding: 18px 0px;
+    font-size: 13px;
+    margin-right: 20px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.page-footer .container span:nth-child(2) {
+    font-size: 21px;
+}
+
+@media (min-device-width: 320px) {
+    .page-footer {
+        border: none;
+    }
+}
