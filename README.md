@@ -2,6 +2,7 @@
 
 ## Notes:
 - Markdown gets converted into html by github on github repo page(s).
+- Monster images created by me and resized using photoshop plugin.
 
 ## Todos:
 - [X] - Add a suffix of views to all the views/sections eg. choose-difficulty should become choose-difficulty-view
@@ -16,6 +17,7 @@
 - [ ] - Remove undesired/not-cool-looking monsters from game.
 - [X] - ~~Randomize monsters position on animating off the screen status.~~ 
     Added monster scrolling animation instead.
+- [ ] - Add links from code examples I got animation from.
 - [ ] - Add styling for '#game-view .card-container' (card) for different
 device sizes (mobile, tablet, desktop) (use media queries).
 - [ ] - Finalize styling for all game views.
