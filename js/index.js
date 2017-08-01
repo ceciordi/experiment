@@ -15,6 +15,7 @@ $(function () {
 	var $aTags = $('a');
         $aTags.on('click', function (e) {
         	var hash = e.currentTarget.hash;
+        	e.preventDefault();
 			if (hash.indexOf('#') > -1) {
 				var $foundElm = $(hash);
 				if ($foundElm.length > 0) {
