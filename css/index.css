@@ -3,6 +3,7 @@
 @import url(views.css);
 @import url(game-view.css);
 @import url(monsters-intro-view.css);
+@import url(choose-difficulty-view.css);
 @import url(game-leader-board-view.css);
 @import url(game-summary-view.css);
 
@@ -62,6 +63,7 @@ a.border-bottom {
 }
 
 a.border-bottom:hover {
+    text-decoration: none;
     border-bottom-color: #e84029;
 }
 
@@ -95,20 +97,6 @@ a.border-bottom:hover {
     border: none;
     margin: 25px 10px;
     box-shadow: 5px 5px 20px rgba(77, 6, 44, 0.51) inset;
-}
-
-.game-area {
-    display: flex;
-    flex-direction: column;
-}
-
-.game-area a {
-    color: #fff;
-    text-decoration: none;
-    text-align: start;
-    border-radius: 20px;
-    margin: 8px;
-    padding: 13px 55px;
 }
 
 #change-color {

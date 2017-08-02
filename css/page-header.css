@@ -39,4 +39,11 @@
 	.page-header .title {
 		font-size: 34px;
 	}
+	.page-header .title,
+	.page-header .title:hover {
+		text-decoration: none;
+	}
+	.page-header .title:hover {
+		cursor: pointer;
+	}
 }

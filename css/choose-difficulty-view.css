@@ -1,0 +1,17 @@
+.game-area {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 550px;
+    margin: auto;
+}
+
+.game-area a {
+    color: #fff;
+    text-decoration: none;
+    text-align: start;
+    border-radius: 20px;
+    margin: 8px;
+    padding: 13px 55px;
+}
