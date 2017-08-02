@@ -1,11 +1,16 @@
-
 #wrapper .main-content .view {
-    /*position: absolute;*/
+    position: absolute;
+    width: 100%;
     background: #fff;
-    /*transition: transform 0.21s, opacity 0.987s;*/
-    /*opacity: 0;*/
+    transition: transform 0.21s, opacity 0.21s;
+    opacity: 0;
     margin: 0 auto 34px;
-    /*z-index: -1;*/
+    z-index: -1;
+}
+
+#wrapper .main-content {
+    position: relative;
+    min-height: 768px;
 }
 
 #wrapper .main-content .view h2 {
@@ -65,15 +70,4 @@
 #wrapper .main-content .view.active {
     opacity: 1;
     z-index: 1;
-}
-
-#choose-difficulty-view {
-
-}
-#choose-difficulty-view nav {
-    text-align: center;
-}
-
-#game-over-view {
-
 }

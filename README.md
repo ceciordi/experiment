@@ -1,5 +1,23 @@
 # Experiment
 
+## Getting monsters json
+"http://localhost:8888/get_monsters_list.php?difficulty=nightmare&imageWidth=89"
+
+### Params for ajax request:
+- **difficulty:**
+	One of the following values
+	- easy 
+	- medium
+	- hard
+	- ultra-hard ()
+	- nightmare (50 monsters)
+- **imageWidth:**
+	One of the following values:
+	- 377
+	- 610
+	- 987
+	- 1587
+	
 ## Notes:
 - Markdown gets converted into html by github on github repo page(s).
 - Monster images created by me and resized using photoshop plugin.
@@ -24,3 +42,4 @@ device sizes (mobile, tablet, desktop) (use media queries).
 - [ ] - Finalize styling for all game views.
 - [X] - Add card example card.
 - [X] - Add cards styling and card effect.
+- [X] - Add php file for ajax request for monsters card

@@ -29,6 +29,12 @@ html, body {
     background: linear-gradient(to right, #ee0979, #ff6a00);
 }
 
+.clearfix:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
 /** For centering trick **/
 .page-footer,
 .page-header,

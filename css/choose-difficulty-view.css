@@ -1,4 +1,8 @@
-.game-area {
+#choose-difficulty-view {
+
+}
+
+#choose-difficulty-view .game-area {
     flex-wrap: wrap;
     display: flex;
     flex-direction: row;
@@ -7,7 +11,7 @@
     margin: auto;
 }
 
-.game-area a {
+#choose-difficulty-view .game-area a {
     color: #fff;
     text-decoration: none;
     text-align: start;

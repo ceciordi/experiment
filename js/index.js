@@ -6,26 +6,65 @@ $(function () {
 		$fauxHeader = $('.page-header.faux-header'),
 		$monstersIntroView = $('#monsters-intro-view'),
 		$monstersIntroContainer = $('.monsters-for-intro', $monstersIntroView),
-		$cards = $('.cards > .card-container');
-		$cards.on('click', function (e) {
-			e.currentTarget.classList.toggle('active');
-		});
+		$cards = $('.cards > .card-container'),
 
-	// Listen for a tag clicks
-	var $aTags = $('a');
-        $aTags.on('click', function (e) {
-        	var hash = e.currentTarget.hash;
-        	e.preventDefault();
-			if (hash.indexOf('#') > -1) {
-				var $foundElm = $(hash);
-				if ($foundElm.length > 0) {
-					var pageHeaderHeight = $fauxHeader.height() + 34;
-                    $body.animate({scrollTop: $foundElm.offset().top - pageHeaderHeight +  'px'}, 1000);
-                }
-			}
-        });
+	 	$aTags = 					$('a'),
+    	$wrapperElm = 				$('#wrapper'),
+        $views = 					$('.main-content .view', $wrapperElm),
+        $chooseDifficultyView = 	$('#choose-difficulty-view'),
+        $gameView =                 $('#game-view'),
 
-	function initMonstersIntro ($monstersParentContainer) {
+        // Default difficulty to use for the game
+        defaultDifficulty =         'easy',
+
+		gameData = {
+			difficulty: defaultDifficulty
+		};
+
+	// Listen to card clicks
+    $cards.on('click', function (e) {
+        e.currentTarget.classList.toggle('active');
+    });
+
+    // Listen for a tag clicks
+    $aTags.on('click', function (e) {
+        var hash = e.currentTarget.hash;
+        e.preventDefault();
+        if (hash.indexOf('#') > -1) {
+            var $foundElm = $(hash);
+            if ($foundElm.length > 0) {
+                var pageHeaderHeight = $fauxHeader.height() + 34;
+                $body.animate({scrollTop: $foundElm.offset().top - pageHeaderHeight +  'px'}, 1000);
+                showView(hash);
+            }
+        }
+    });
+
+    // Start game with chosen difficulty
+    $('a', $chooseDifficultyView).click(function (e) {
+        e.preventDefault();
+        var domElement = e.currentTarget;
+        // Get 'data-difficulty' attribute value
+        gameData.difficulty = domElement.dataset.difficulty || defaultDifficulty;
+        showGameView();
+    });
+
+    initMonstersIntro($monstersIntroContainer);
+
+    function showChooseDifficultyView () {
+        return showView('#choose-difficulty-view');
+    }
+
+    function showGameView () {
+        showView('#game-view');
+    }
+
+    function showView (id) {
+        $views.removeClass('active');
+        return $views.filter(id).addClass('active');
+    }
+
+    function initMonstersIntro ($monstersParentContainer) {
 		var $monsters = $('> div', $monstersParentContainer),
 			monsterWidth = $monsters.eq(0).width(),
 			monstersLength = $monsters.length,
@@ -70,7 +109,5 @@ $(function () {
             requestAnimationFrame(animateMonster);
         });
 	}
-
-    initMonstersIntro($monstersIntroContainer);
 
 });

@@ -22,7 +22,7 @@
                     <h1>Mänhsturs</h1>
                 </a>
                 <div class="controls pull-right">
-                    <a href="#choose-difficulty" class="btn btn-default">PLAY</a>
+                    <a href="#choose-difficulty-view" class="btn btn-default play-btn">PLAY</a>
                     <a href="#signup-form" class="btn btn-default">SIGN UP</a>
                     <a href="#signin-form" class="btn btn-default">SIGN IN</a>
                 </div>
@@ -39,7 +39,7 @@
                     </a>
                 </div>
                 <div class="controls pull-right">
-                    <a href="#choose-difficulty">
+                    <a href="#choose-difficulty-view">
                         <button class="btn btn-default">PLAY</button>
                     </a>
                     <a href="#signup-form">
@@ -53,8 +53,8 @@
         </div>
     </div>
 
-    <div class="main-content">
-        <div id="monsters-intro-view" class="view jumbotron">
+    <div class="main-content clearfix">
+        <div id="monsters-intro-view" class="view jumbotron active">
             <div class="typewriter">
                 <h2>Flip the cards! Pair <br>the mänhsturs up and <br>boost your memory!</h2>
             </div>
@@ -359,13 +359,13 @@
             </div>
         </div>
 
-        <div id="choose-difficulty" class="view">
+        <div id="choose-difficulty-view" class="view">
             <div class="container">
                 <div class="typewriter"><h2>CHOOSE A DIFFICULTY!</h2></div>
                 <div class="game-area ">
-                    <a href="#">EASY</a>
-                    <a href="#">MEDIUM</a>
-                    <a href="#">HARD</a>
+                    <a href="#" data-difficulty="easy">Easy</a>
+                    <a href="#" data-difficulty="medium">Medium</a>
+                    <a href="#" data-difficulty="hard">Hard</a>
                 </div>
             </div>
         </div>
@@ -385,7 +385,7 @@
                     <button type="submit" class="btn btn-default #change-color">Submit</button>
                 </form>
                 <div class="no-account">
-                    <a class="border-bottom" href="#choose-difficulty">OR PLAY AS A GUEST!</a>
+                    <a class="border-bottom" href="#choose-difficulty-view">OR PLAY AS A GUEST!</a>
                 </div>
             </div>
         </div>
