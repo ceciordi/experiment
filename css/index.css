@@ -18,8 +18,12 @@ html, body {
 }
 
 #wrapper {
-    height: 100%;
+    position: relative;
+    /*display: flex;*/
+    /*flex-direction: column;*/
     width: 100%;
+    height: 100%;
+    min-height: 100vh;
 }
 
 .default-bg {
@@ -39,7 +43,21 @@ html, body {
 .page-footer,
 .page-header,
 .main-content {
+    position: relative;
     text-align: center;
+}
+
+.page-header {
+}
+
+.main-content {
+}
+
+.page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 /** Completion of centering trick **/
@@ -149,59 +167,6 @@ form .btn-default:hover {
     background-color: #e84029;
     color: #FFF;
     border: 1px solid #e84029;
-}
-
-.main-content .monster-images {
-    text-align: center;
-}
-
-.main-content .monster-images .monster-image {
-    margin: 0 auto 5px;
-}
-
-.main-content .monster-images .monster-image img {
-    display: inline-block;
-    border: 1px solid #ff6a00;
-    border-radius: 20px;
-}
-
-.monsters-showcase {
-    list-style: none;
-    width: 100%;
-}
-
-.monsters-images {
-    margin: auto 0;
-}
-
-.monsters-showcase li {
-    display: block;
-    float: left;
-    width: 25%;
-}
-
-.monster-pic {
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-    background-color: #000;
-}
-
-.monster-pic img {
-    opacity: 0.7;
-    width: 100%;
-    height: auto;
-    transform: scale(1.15);
-    transition: transform 0.5s, opacity 0.5s;
-}
-
-.monster-pic img:hover {
-    opacity: 1;
-    transform: scale(1.03);
-}
-
-.opening-cards {
-    margin-top: 21px;
 }
 
 .btn .btn-default {

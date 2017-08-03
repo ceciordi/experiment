@@ -2,7 +2,8 @@
     position: absolute;
     width: 100%;
     background: #fff;
-    transition: transform 0.21s, opacity 0.21s;
+    transition: transform 0.34s, opacity 0.34s;
+    transform: rotate(0deg) scale(0.55, 0.55);
     opacity: 0;
     margin: 0 auto 34px;
     z-index: -1;
@@ -10,7 +11,7 @@
 
 #wrapper .main-content {
     position: relative;
-    min-height: 768px;
+    /*min-height: 768px;*/
 }
 
 #wrapper .main-content .view h2 {
@@ -68,6 +69,7 @@
 }
 
 #wrapper .main-content .view.active {
+    transform: rotate(360deg) scale(1, 1);
     opacity: 1;
     z-index: 1;
 }

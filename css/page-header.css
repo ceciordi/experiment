@@ -11,6 +11,14 @@
 	z-index: 999;
 }
 
+.page-header .title,
+.page-header .title:hover {
+	text-decoration: none;
+}
+.page-header .title:hover {
+	cursor: pointer;
+}
+
 .page-header ul {
 	padding: 0;
 	margin: 0;
@@ -38,12 +46,5 @@
 @media (min-device-width: 320px) and (orientation: portrait) {
 	.page-header .title {
 		font-size: 34px;
-	}
-	.page-header .title,
-	.page-header .title:hover {
-		text-decoration: none;
-	}
-	.page-header .title:hover {
-		cursor: pointer;
 	}
 }
