@@ -8,8 +8,8 @@
     font-size: 34px;
 }
 
-#game-view > header .game-info {
-
+#game-view header .game-info * {
+    display: inline-block;
 }
 
 #game-view .cards {
@@ -78,4 +78,26 @@
     background-image: linear-gradient(to right, #ee0979, #ff6a00), url(../img/sakura/sakura.png);
     background-size: 100%;
     /*background-blend-mode: overlay;*/
+}
+
+@media (min-device-width: 320px) {
+    #game-view .card-container .card {
+    /*flex-basis: 144px;*/
+    /*height: 233px;*/
+    /*text-align: center;*/
+    /*perspective: 987px;*/
+    /*margin-bottom: 21px;*/
+    }
+
+
+@media (min-device-width: 320px) and (orientation: portrait) {
+
+}
+
+@media (min-device-width: 320px) and (orientation: landscape) {
+
+}
+
+@media (min-device-width: 768px) {
+
 }

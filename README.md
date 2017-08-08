@@ -44,4 +44,5 @@ device sizes (mobile, tablet, desktop) (use media queries).
 - [ ] - Finalize styling for all game views.
 - [ ] - Update 'signin' and 'signup' views to show that they are example views
 and not official ones.
-- [ ] - Remove undesired/not-cool-looking monsters from game.
+- [ ] - Leader board needs 3 columns only. Tag/Difficulty/Num secs. Json file has real time games, other has the leader board.One gets created in php the other one is sorted with JS.
+- [ ] - Use a switch statement to sort all 5 difficulties. Create an object for each difficulty. Loops 10 times to determine the first 10 results. delta. do you have a matrix for the score.

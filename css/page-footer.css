@@ -20,5 +20,6 @@
 @media (min-device-width: 320px) {
     .page-footer {
         border: none;
+        /*max-height: 100px;*/
     }
 }

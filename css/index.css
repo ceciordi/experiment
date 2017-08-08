@@ -26,6 +26,7 @@ html, body {
     min-height: 100vh;
 }
 
+
 .default-bg {
     background: -webkit-linear-gradient(left, #ee0979, #ff6a00);
     background: -o-linear-gradient(right, #ee0979, #ff6a00);
@@ -142,7 +143,7 @@ a.border-bottom:hover {
     color: #e84029;
     font-family: 'Barrio', sans-serif;
     font-size: 34px;
-    text-align: start;
+    text-align: left;
 }
 
 .jumbotron {

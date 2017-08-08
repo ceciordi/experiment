@@ -47,4 +47,23 @@
 	.page-header .title {
 		font-size: 34px;
 	}
+	.page-header, .faux-header {
+		max-height: 150px;
+	}
+	.controls .pull-right {
+	/*margin-bottom: 15px*/
+	}
+}
+
+@media (min-device-width: 320px) and (orientation: landscape) {
+	.page-header .row {
+		max-height: 150px;
+	}
+
+}
+
+@media (min-device-width: 768px) {
+	 {
+
+	}
 }

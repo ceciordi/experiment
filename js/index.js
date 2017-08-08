@@ -18,7 +18,7 @@ $(function () {
             var $foundElm = $(hash);
             if ($foundElm.length > 0) {
                 var pageHeaderHeight = $fauxHeader.height() + 34;
-                $body.animate({scrollTop: $foundElm.offset().top - pageHeaderHeight +  'px'}, 1000);
+                $body.animate({scrollTop: 0 /*$foundElm.offset().top - pageHeaderHeight +  'px'*/}, 1000);
                 showView(hash);
             }
         }
@@ -154,6 +154,7 @@ $(function () {
         gameOverScreenInterval =    null,
         gameSummaryScreenInterval = null,
         gameScreenInterval =        null,
+        leaderBoardScreenInterval = null,
 
         // Variables for game logic
         $lastCardSingleClicked =    null,  // Current card single clicked  after a card has been double clicked
@@ -240,8 +241,20 @@ $(function () {
         var duration = gameOverScreenDuration;
         gameOverScreenInterval = setInterval(function () {
             if (duration <= 0) {
-                showWelcomeView();
+                showLeaderBoardView();
                 clearInterval(gameOverScreenInterval);
+            }
+            duration -= 1000;
+        }, 1000);
+    }
+
+    function showLeaderBoardView () {
+        showView('#game-leader-board-view');
+        var duration = gameOverScreenDuration;
+        leaderBoardScreenInterval = setInterval(function () {
+            if (duration <= 0) {
+                showWelcomeView();
+                clearInterval(leaderBoardScreenInterval);
             }
             duration -= 1000;
         }, 1000);
@@ -391,7 +404,7 @@ $(function () {
             .off('dblclick',  onCardDoubleClick);
     }
 
-    // Goto "choose difficulty" view
+    // Go to "choose difficulty" view
     $('.play-btn').click(function (e) {
         e.preventDefault();
         clearTrackedCards();

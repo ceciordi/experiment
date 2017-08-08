@@ -12,6 +12,7 @@
 #wrapper .main-content {
     position: relative;
     /*min-height: 768px;*/
+    padding-top: 21px;
 }
 
 #wrapper .main-content .view h2 {
@@ -33,7 +34,9 @@
     blink-caret .75s step-end infinite;
 }
 
-#wrapper .main-content .view .container.view-rounded-corners {  }
+#wrapper .main-content .view .container.view-rounded-corners {
+    margin: 55px auto;
+}
 
 #wrapper .main-content .view .container.view-rounded-corners,
 #wrapper .main-content .view .row.view-rounded-corners {
