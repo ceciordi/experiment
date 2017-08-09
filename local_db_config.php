@@ -5,8 +5,8 @@ declare(strict_types=1);
 
 return [
     'username' => 'root',
-    'password' => 'password',
+    'password' => '',
     'database' => 'card_game',
-    'host' => 'localhost',
+    'host' => '127.0.0.1',
     'port' => 3306
 ];

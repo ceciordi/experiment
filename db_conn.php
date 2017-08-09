@@ -3,7 +3,7 @@
 // Same as 'use strict' in javascript
 declare(strict_types=1);
 
-$db_config = include('../local_db_config.php');
+$db_config = include('local_db_config.php');
 
 $conn = new mysqli (
         $db_config['host'],
@@ -14,8 +14,10 @@ $conn = new mysqli (
     );
 
 if ($conn->connect_errno) {
-    echo "Failed to connect to MySQL: (" . $conn->connect_errno . ") " .
-    $conn->connect_error;
+    header('Content-type: application/json');
+    echo json_encode([
+        'error' => "Failed to connect to MySQL: (" . $conn->connect_errno . ") " .
+            $conn->connect_error]);
 }
 
 return $conn;

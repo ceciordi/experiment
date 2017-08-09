@@ -29,6 +29,7 @@ $(function () {
         .then(function () {
             initMonstersIntro($monstersIntroContainer);
             showWelcomeView();
+            buildLeaderBoard();
         });
 
     function initMonstersIntro ($monstersParentContainer) {
@@ -122,6 +123,7 @@ $(function () {
         $gameView =                 $(gameViewSel, $wrapperElm),
         $gameTimer =                $('.game-timer .value', $gameView),
         $gameSummaryView =          $(gameSummaryViewSel, $wrapperElm),
+        $gameLeaderBoardView =      $('#game-leader-board-view', $wrapperElm),
         $gameViewScoreElm =         $('.user-score .value', $gameView),
         $views =                    $('.main-content .view', $wrapperElm),
         $cardsHolder =              $('.cards', $wrapperElm),
@@ -188,12 +190,29 @@ $(function () {
         return showView(chooseDifficultyViewSel);
     }
 
+    function recordUserStats (stats) {
+        console.log(stats);
+        var statsToSend = {
+            tag: 'guest',
+            difficulty: stats.difficulty,
+            duration: stats.timeElapsed,
+            score: stats.pairsFound * 100,
+            date: (new Date()).getTime()
+        };
+        return $.post('/add_to_leader_board.php', statsToSend)
+            .then(function (result) {
+                if (result.error) { throw new Error(result.error); }
+                return buildLeaderBoard();
+            }, alert);
+    }
+
     function showTimeUpAndSummary ($cards) {
         $gameSummaryView.find('.pairs-found').text(gameData.pairsFound);
         $gameSummaryView.find('.num-pairs').text(gameData.numPairs);
         $gameSummaryView.find('.num-seconds-taken').text(gameData.timeElapsed);
         removeCardsEventListeners($cards);
         showView(gameSummaryViewSel);
+        recordUserStats(gameData);
         var duration = timeUpAndSummaryDuration;
         gameSummaryScreenInterval = setInterval(function () {
             if (duration <= 0) {
@@ -248,9 +267,33 @@ $(function () {
         }, 1000);
     }
 
+    function buildLeaderBoard () {
+        return $.get('/get_leader_board.php')
+            .then(function (data) {
+                var out = `<tbody>`;
+                data.data.forEach(function (row) {
+                    var rowDate = new Date(row.date),
+                        dateToShow = (rowDate.getMonth() + 1) + '/' +
+                            rowDate.getDate() + '/' +
+                            (rowDate.getFullYear() + '').substring(2, 4);
+                    out +=  `
+                         <tr>
+                            <td>${row.tag}</td>
+                            <td>${row.score}</td>
+                            <td>${row.difficulty}</td>
+                            <td>${row.duration}</td>
+                            <td>${dateToShow}</td>
+                        </tr>
+                            `;
+                });
+                out += `</tbody>`;
+                $gameLeaderBoardView.find('table > tbody').replaceWith(out);
+            });
+    }
+
     function showLeaderBoardView () {
         showView('#game-leader-board-view');
-        var duration = gameOverScreenDuration;
+        var duration = gameOverScreenDuration * 2;
         leaderBoardScreenInterval = setInterval(function () {
             if (duration <= 0) {
                 showWelcomeView();

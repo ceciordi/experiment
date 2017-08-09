@@ -10,7 +10,7 @@ $limit = $_GET['limit'] ?? 10;
 $db = include('db_conn.php');
 
 // Prepare the selection statement to execute on the database for our records
-$stmt = $db->prepare('SELECT * FROM `card_game`.`tags_and_scores` LIMIT ?');
+$stmt = $db->prepare('SELECT * FROM `card_game`.`tags_and_scores` ORDER BY `date` DESC LIMIT ?');
 
 // Tell the prepared statement the limit we want to use
 $stmt->bind_param('i', $limit);

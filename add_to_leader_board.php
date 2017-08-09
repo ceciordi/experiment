@@ -3,13 +3,13 @@
 // Same as 'use strict' in javascript
 declare(strict_types=1);
 
-$tag = $_GET['tag'] ?? '';
-$difficulty = $_GET['difficulty'] ?? 'easy';
-$duration = (int) $_GET['duration'] ?? 0;
-$score = (int) $_GET['score'] ?? 0;
-$date = (int) $_GET['date'] ?? 0;
+$tag = $_POST['tag'] ?? '';
+$difficulty = $_POST['difficulty'] ?? 'easy';
+$duration = (int) $_POST['duration'] ?? 0;
+$score = (int) $_POST['score'] ?? 0;
+$date = (int) $_POST['date'] ?? 0;
 
-if (empty($_GET)) {
+if (empty($_POST)) {
         $json = ['error' => "No data received."];
 } else {
     $db = include('db_conn.php');
