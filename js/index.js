@@ -84,7 +84,7 @@ $(function () {
 
     function populateMonstersIntro () {
         // Get monsters intro json (pass imagesByWidth to get only certain image sizes)
-        return $.get('/get_monsters_intro.php', {imagesByWidth: 377})
+        return $.get('get_monsters_intro.php', {imagesByWidth: 377})
 
         // Then for each monster, in json (`data`) add some html for it
             .then(function (data) {
@@ -211,7 +211,7 @@ $(function () {
             score: stats.pairsFound * 100,
             date: (new Date()).getTime()
         };
-        return $.post('/add_to_leader_board.php', statsToSend)
+        return $.post('add_to_leader_board.php', statsToSend)
             .then(function (result) {
                 if (result.error) { throw new Error(result.error); }
                 return buildLeaderBoard();
@@ -245,7 +245,7 @@ $(function () {
     }
 
     function buildGameBoard () {
-        return $.get('/get_monsters_list.php', {difficulty: gameData.difficulty, imagesByWidth: 987})
+        return $.get('get_monsters_list.php', {difficulty: gameData.difficulty, imagesByWidth: 987})
             .then(function (data) {
                 var cardsHtml = ``;
                 data.forEach(function (monsterData) {
@@ -280,7 +280,7 @@ $(function () {
     }
 
     function buildLeaderBoard () {
-        return $.get('/get_leader_board.php')
+        return $.get('get_leader_board.php')
             .then(function (data) {
                 var out = `<tbody>`;
                 data.data.forEach(function (row) {
