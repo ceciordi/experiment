@@ -38,32 +38,107 @@
 .page-header > * {
 	display: inline-block;
 }
-
+.page-header .controls {
+    z-index: 98;
+}
 .faux-header {
 	visibility: hidden;
 }
 
-@media (min-device-width: 320px) and (orientation: portrait) {
-	.page-header .title {
-		font-size: 34px;
-	}
-	.page-header, .faux-header {
-		max-height: 150px;
-	}
-	.controls .pull-right {
-	/*margin-bottom: 15px*/
-	}
+.page-header .hamburger {
+    position: absolute;
+    right: 0;
+    display: flex;
+    width: 42px;
+    height: 28px;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(100vh);
+    margin: 8px;
+    opacity: 0.72;
+    z-index: 97;
 }
 
-@media (min-device-width: 320px) and (orientation: landscape) {
-	.page-header .row {
-		max-height: 150px;
-	}
-
+.page-header .hamburger div {
+    background: #fff;
+    flex-basis: 6px;
+    width: 100%;
 }
 
-@media (min-device-width: 768px) {
-	 {
+@media (min-device-width: 320px) {
 
-	}
+    html.touchevents .page-header .controls {
+        position: absolute;
+    }
+
+    html.touchevents .page-header *,
+    html.touchevents .page-footer * {
+        box-sizing: border-box;
+    }
+
+    html.touchevents .page-header,
+    html.touchevents .page-footer {
+        text-align: left;
+    }
+
+    html.touchevents .page-header .title {
+        margin-top: 11px;
+    }
+    html.touchevents .page-header .title h1 {
+        font-size: 34px;
+        margin: 0;
+    }
+
+    html.touchevents .page-header .hamburger {
+        top: 10px;
+        right: 8px;
+        transform: translateX(0);
+    }
+
+    html.touchevents .page-header,
+    html.touchevents .faux-header,
+    html.touchevents .page-footer {
+        /*position: relative;*/
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 64px;
+    }
+
+    html.touchevents .faux-header.menu-expanded,
+    html.touchevents .page-header.menu-expanded {
+        max-height: 610px;
+    }
+
+    html.touchevents .page-header.menu-expanded .controls {
+        transform: translateY(0);
+    }
+
+    html.touchevents .controls {
+        position: absolute;
+        transition: transform 0.21s linear;
+        transform: translateY(-100%);
+        background: -webkit-linear-gradient(left, #ee0979, #ff6a00);
+        background: -o-linear-gradient(right, #ee0979, #ff6a00);
+        background: -moz-linear-gradient(right, #ee0979, #ff6a00);
+        background: linear-gradient(to right, #ee0979, #ff6a00);
+        right: 0;
+    }
+
+    html.touchevents .controls a {
+        margin-top: 0;
+        display: block;
+    }
+}
+
+@media (min-width: 586px) {
+
+    .page-header,
+    .faux-header,
+    .page-footer {
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+
 }

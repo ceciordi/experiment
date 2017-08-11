@@ -82,13 +82,13 @@
 
 @media (min-device-width: 320px) {
     #game-view .card-container .card {
-    /*flex-basis: 144px;*/
-    /*height: 233px;*/
-    /*text-align: center;*/
-    /*perspective: 987px;*/
-    /*margin-bottom: 21px;*/
+        /*flex-basis: 144px;*/
+        /*height: 233px;*/
+        /*text-align: center;*/
+        /*perspective: 987px;*/
+        /*margin-bottom: 21px;*/
     }
-
+}
 
 @media (min-device-width: 320px) and (orientation: portrait) {
 

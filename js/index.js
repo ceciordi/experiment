@@ -3,6 +3,7 @@ $(function () {
     'use strict';
 
 	var $body = $('body'),
+        $pageHeader = $('.page-header').eq(0),
 		$fauxHeader = $('.page-header.faux-header'),
 		$monstersIntroView = $('#monsters-intro-view'),
 		$monstersIntroContainer = $('.monsters-for-intro', $monstersIntroView),
@@ -19,6 +20,9 @@ $(function () {
             if ($foundElm.length > 0) {
                 var pageHeaderHeight = $fauxHeader.height() + 34;
                 $body.animate({scrollTop: 0 /*$foundElm.offset().top - pageHeaderHeight +  'px'*/}, 1000);
+                if ($pageHeader.hasClass('menu-expanded')) {
+                    $pageHeader.removeClass('menu-expanded');
+                }
                 showView(hash);
             }
         }
@@ -100,6 +104,14 @@ $(function () {
                 $monstersIntroContainer.html('').append(monstersHtml);
             });
     }
+
+    function initMobileMenu () {
+        $('.hamburger', $pageHeader).click(function (e) {
+            $pageHeader.toggleClass('menu-expanded');
+        });
+    }
+
+    initMobileMenu();
 
     // Preliminaries before writing the game code
     // ------------------------------------------------
